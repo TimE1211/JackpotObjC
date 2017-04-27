@@ -15,10 +15,10 @@
   Ticket *aTicket = nil;
   aTicket.winner = false;
   aTicket.payout = @"";
-//  for ( * in);
-//  {
+  for ( * in);
+  {
     [self createPick];
-//  }
+  }
 }
 
 - (void)init: (NSArray *)picksArray
@@ -31,7 +31,7 @@
   }
 }
 
-- (void)createPick;
++ (void)createPick;
 {
   Boolean *pickFound = false;
   repeat
