@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,37 +18,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" id="kfH-hc-Sg3" customClass="TicketCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" textLabel="Cp9-Ls-x7O" detailTextLabel="vhg-G1-PuR" style="IBUITableViewCellStyleValue1" id="kfH-hc-Sg3" customClass="TicketCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfH-hc-Sg3" id="64j-mj-UNZ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iel-WM-YcS">
-                                            <rect key="frame" x="8" y="11.5" width="70" height="20.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ticket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cp9-Ls-x7O">
+                                            <rect key="frame" x="15" y="12" width="47" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDe-Bi-a5h">
-                                            <rect key="frame" x="314.5" y="11" width="52.5" height="21"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Winnings" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vhg-G1-PuR">
+                                            <rect key="frame" x="289" y="12" width="71" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="Iel-WM-YcS" firstAttribute="centerY" secondItem="64j-mj-UNZ" secondAttribute="centerY" id="9Qd-Bo-AZz"/>
-                                        <constraint firstItem="Iel-WM-YcS" firstAttribute="leading" secondItem="64j-mj-UNZ" secondAttribute="leadingMargin" id="mTc-kz-3EW"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="hDe-Bi-a5h" secondAttribute="trailing" id="wQt-za-KvS"/>
-                                        <constraint firstItem="hDe-Bi-a5h" firstAttribute="centerY" secondItem="64j-mj-UNZ" secondAttribute="centerY" id="zxu-JB-hOM"/>
-                                    </constraints>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="numbersLabel" destination="Iel-WM-YcS" id="8wL-FA-O3m"/>
-                                    <outlet property="payoutLabel" destination="hDe-Bi-a5h" id="pya-qd-s54"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -88,33 +79,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Winning Lottery Ticket Numbers Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g9C-e8-E38">
-                                <rect key="frame" x="16" y="318" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ze-Qh-fTt">
-                                <rect key="frame" x="138" y="380" width="98" height="30"/>
+                                <rect key="frame" x="138.5" y="449.5" width="98" height="30"/>
                                 <state key="normal" title="Check Tickets"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6K-tC-3JL">
-                                <rect key="frame" x="163" y="439" width="48" height="30"/>
+                                <rect key="frame" x="163.5" y="487.5" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pw7-i8-S31">
+                                <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3ze-Qh-fTt" firstAttribute="centerX" secondItem="g9C-e8-E38" secondAttribute="centerX" id="1lz-ab-dfa"/>
-                            <constraint firstItem="g9C-e8-E38" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jdj-yY-X63"/>
+                            <constraint firstItem="3ze-Qh-fTt" firstAttribute="top" secondItem="Pw7-i8-S31" secondAttribute="bottom" constant="8" id="C0t-r9-wOE"/>
                             <constraint firstItem="b6K-tC-3JL" firstAttribute="centerX" secondItem="3ze-Qh-fTt" secondAttribute="centerX" id="OWM-jv-3QT"/>
-                            <constraint firstItem="g9C-e8-E38" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qaj-tI-ee7"/>
-                            <constraint firstItem="3ze-Qh-fTt" firstAttribute="top" secondItem="g9C-e8-E38" secondAttribute="bottom" constant="32" id="cGS-y8-jTt"/>
-                            <constraint firstItem="b6K-tC-3JL" firstAttribute="top" secondItem="3ze-Qh-fTt" secondAttribute="bottom" constant="29" id="fkF-rG-Thc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="g9C-e8-E38" secondAttribute="trailing" id="mRG-Z0-Fu6"/>
-                            <constraint firstItem="g9C-e8-E38" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="x1H-cB-Iev"/>
+                            <constraint firstItem="Pw7-i8-S31" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U2C-Aq-UNB"/>
+                            <constraint firstItem="3ze-Qh-fTt" firstAttribute="centerX" secondItem="Pw7-i8-S31" secondAttribute="centerX" id="bhk-TG-dgO"/>
+                            <constraint firstItem="Pw7-i8-S31" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n9F-DB-eJp"/>
+                            <constraint firstItem="b6K-tC-3JL" firstAttribute="top" secondItem="3ze-Qh-fTt" secondAttribute="bottom" constant="8" id="rXW-fc-nlK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ticketPicker" destination="Pw7-i8-S31" id="cUN-1j-hkC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

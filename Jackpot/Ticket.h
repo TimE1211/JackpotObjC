@@ -1,19 +1,19 @@
+////
+////  Ticket.h
+////  Jackpot
+////
+////  Created by Timothy Hang on 4/25/17.
+////  Copyright © 2017 Timothy Hang. All rights reserved.
+////
 //
-//  Ticket.h
-//  Jackpot
+//#import <Foundation/Foundation.h>
 //
-//  Created by Timothy Hang on 4/25/17.
-//  Copyright © 2017 Timothy Hang. All rights reserved.
+//@interface Ticket : NSObject
 //
-
-#import <Foundation/Foundation.h>
-
-@interface Ticket : NSObject
-
-@property (nonatomic) NSSet *picks;
-@property (nonatomic) NSString *payout;
-@property (assign) Boolean *winner;
-
-+ (Ticket *)init;
-
-@end
+//@property (nonatomic) NSSet *picks;
+//@property (nonatomic) NSString *payout;
+//@property (assign) Boolean *winner;
+//
+//+ (Ticket *)init;
+//
+//@end

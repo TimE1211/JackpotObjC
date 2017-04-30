@@ -7,12 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Ticket.h"
+#import "Jackpot-Swift.h"
+
+@protocol WinningTicketViewControllerDelegate
+
+- (void)winningTicketWasChosen:(Ticket *)winningTicket;
+
+@end
 
 @interface WinningTicketViewController : UIViewController
 
-@property (nonatomic) NSMutableArray *ticketArray;
-@property (nonatomic) Ticket *winningTicket;
+@property (nonatomic) NSMutableArray *winningTicket;
+@property (nonatomic) id<WinningTicketViewControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIPickerView *ticketPicker;
+
 
 @end
 
