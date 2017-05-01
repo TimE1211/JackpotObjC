@@ -11,16 +11,14 @@
 
 @protocol WinningTicketViewControllerDelegate
 
-- (void)winningTicketWasChosen:(Ticket *)winningTicket;
+- (void)winningTicketWasChosen:(Ticket *)ticket;
 
 @end
 
 @interface WinningTicketViewController : UIViewController
 
-@property (nonatomic) NSMutableArray *winningTicket;
-@property (nonatomic) id<WinningTicketViewControllerDelegate> delegate;
-@property (weak, nonatomic) IBOutlet UIPickerView *ticketPicker;
-
+@property (strong, nonatomic) id<WinningTicketViewControllerDelegate> delegate;
 
 @end
 
+ 

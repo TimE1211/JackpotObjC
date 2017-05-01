@@ -8,16 +8,17 @@
 
 import Foundation
 
-class Ticket
+class Ticket: NSObject
 {
   var winner: Bool
   var payout: String
   fileprivate var picks = Set<Int>()
   
-  init()
+  override init()
   {
     winner = false
     payout = ""
+    super.init()
     for _ in 0..<6
     {
       createPick()
@@ -48,7 +49,7 @@ class Ticket
     } while !pickFound
   }
   
-  func description() -> String
+  func numberDescription() -> String
   {
     var numbers = ""
     for pick in picks.sorted()

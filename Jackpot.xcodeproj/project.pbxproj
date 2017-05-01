@@ -14,7 +14,6 @@
 		20E885411EAFDC6500C71B05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20E8853F1EAFDC6500C71B05 /* Main.storyboard */; };
 		20E885431EAFDC6500C71B05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E885421EAFDC6500C71B05 /* Assets.xcassets */; };
 		20E885461EAFDC6500C71B05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20E885441EAFDC6500C71B05 /* LaunchScreen.storyboard */; };
-		20E8854F1EAFDE2D00C71B05 /* Ticket.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E8854E1EAFDE2D00C71B05 /* Ticket.m */; };
 		20E885521EB052FC00C71B05 /* JackpotTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E885511EB052FC00C71B05 /* JackpotTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +30,6 @@
 		20E885421EAFDC6500C71B05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20E885451EAFDC6500C71B05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20E885471EAFDC6500C71B05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20E8854D1EAFDE2D00C71B05 /* Ticket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ticket.h; sourceTree = "<group>"; };
-		20E8854E1EAFDE2D00C71B05 /* Ticket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ticket.m; sourceTree = "<group>"; };
 		20E885501EB052FC00C71B05 /* JackpotTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JackpotTableViewController.h; sourceTree = "<group>"; };
 		20E885511EB052FC00C71B05 /* JackpotTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JackpotTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,8 +71,6 @@
 				20E8853C1EAFDC6500C71B05 /* WinningTicketViewController.h */,
 				20E8853D1EAFDC6500C71B05 /* WinningTicketViewController.m */,
 				20C47EBF1EB68D0000C223C2 /* Ticket.swift */,
-				20E8854D1EAFDE2D00C71B05 /* Ticket.h */,
-				20E8854E1EAFDE2D00C71B05 /* Ticket.m */,
 				20E8853F1EAFDC6500C71B05 /* Main.storyboard */,
 				20E885421EAFDC6500C71B05 /* Assets.xcassets */,
 				20E885441EAFDC6500C71B05 /* LaunchScreen.storyboard */,
@@ -172,7 +167,6 @@
 				20E885521EB052FC00C71B05 /* JackpotTableViewController.m in Sources */,
 				20E885381EAFDC6500C71B05 /* main.m in Sources */,
 				20C47EC01EB68D0000C223C2 /* Ticket.swift in Sources */,
-				20E8854F1EAFDE2D00C71B05 /* Ticket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

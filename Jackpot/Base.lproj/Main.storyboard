@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" textLabel="Cp9-Ls-x7O" detailTextLabel="vhg-G1-PuR" style="IBUITableViewCellStyleValue1" id="kfH-hc-Sg3" customClass="TicketCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketCell" textLabel="Cp9-Ls-x7O" detailTextLabel="vhg-G1-PuR" style="IBUITableViewCellStyleValue1" id="kfH-hc-Sg3">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kfH-hc-Sg3" id="64j-mj-UNZ">
@@ -52,15 +52,18 @@
                     <navigationItem key="navigationItem" title="Jackpot" id="oWR-tE-Q4b">
                         <barButtonItem key="leftBarButtonItem" title="Check Ticket" id="KMF-3J-40l">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="QU0-fV-BpJ"/>
+                                <segue destination="BYZ-38-t0r" kind="show" identifier="CheckTicketSegue" id="FaO-fw-5R7"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uvW-08-igv"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uvW-08-igv">
+                            <connections>
+                                <action selector="createNewTicket:" destination="85T-UL-ZVK" id="d2S-Cb-ArM"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addTicket" destination="uvW-08-igv" id="9yK-zR-1aH"/>
-                        <outlet property="checkTicket" destination="KMF-3J-40l" id="zt1-5R-dh6"/>
+                        <outlet property="addButton" destination="uvW-08-igv" id="pb1-Py-tZO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNE-Hd-eWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,10 +85,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ze-Qh-fTt">
                                 <rect key="frame" x="138.5" y="449.5" width="98" height="30"/>
                                 <state key="normal" title="Check Tickets"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6K-tC-3JL">
-                                <rect key="frame" x="163.5" y="487.5" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="checkTicketsButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0k5-Cb-4Q5"/>
+                                </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pw7-i8-S31">
                                 <rect key="frame" x="27.5" y="225.5" width="320" height="216"/>
@@ -94,15 +96,13 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3ze-Qh-fTt" firstAttribute="top" secondItem="Pw7-i8-S31" secondAttribute="bottom" constant="8" id="C0t-r9-wOE"/>
-                            <constraint firstItem="b6K-tC-3JL" firstAttribute="centerX" secondItem="3ze-Qh-fTt" secondAttribute="centerX" id="OWM-jv-3QT"/>
                             <constraint firstItem="Pw7-i8-S31" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U2C-Aq-UNB"/>
                             <constraint firstItem="3ze-Qh-fTt" firstAttribute="centerX" secondItem="Pw7-i8-S31" secondAttribute="centerX" id="bhk-TG-dgO"/>
                             <constraint firstItem="Pw7-i8-S31" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n9F-DB-eJp"/>
-                            <constraint firstItem="b6K-tC-3JL" firstAttribute="top" secondItem="3ze-Qh-fTt" secondAttribute="bottom" constant="8" id="rXW-fc-nlK"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="ticketPicker" destination="Pw7-i8-S31" id="cUN-1j-hkC"/>
+                        <outlet property="picker" destination="Pw7-i8-S31" id="oo8-Jh-D3F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
